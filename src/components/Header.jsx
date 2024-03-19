@@ -8,6 +8,7 @@ function Header() {
         <li><Link href='/contect'>Contect</Link></li>
         <li>About</li>
         <li>User</li>
+        <li><Link href='/login'>Authentication</Link></li>
         <li><Link href="/products">Products</Link></li>
       </ul>
     </div>

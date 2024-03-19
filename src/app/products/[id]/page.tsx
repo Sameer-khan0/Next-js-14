@@ -1,26 +1,31 @@
-interface Param {
-    id: number;
-  }
+import { Metadata } from "next";
 
-interface Product{
-    id: number;
-    title: string;
-    price: number;
-    image: string
+export const metadata:Metadata = {
+  title: `Product`,
+};
+
+interface Param {
+  id: number;
 }
 
-  const UserPage = async ({ params }: { params: Param }) => {
-    const { id } = params;
-    const req = await fetch(`https://fakestoreapi.com/products/${id}`)
-    const res: Product = await req.json()
-    return (
-      <div>
-        <h1>{res.title}</h1>
-        <h2>{res.price}</h2>
-        <img src={res.image} alt="image" />
-      </div>
-    );
-  }
-  
-  export default UserPage;
-  
+interface Product {
+  id: number;
+  title: string;
+  price: number;
+  image: string;
+}
+
+const UserPage = async ({ params }: { params: Param }) => {
+  const { id } = params;
+  const req = await fetch(`https://fakestoreapi.com/products/${id}`);
+  const res: Product = await req.json();
+  return (
+    <div>
+      <h1>{res.title}</h1>
+      <h2>{res.price}</h2>
+      <img src={res.image} alt="image" />
+    </div>
+  );
+};
+
+export default UserPage;
