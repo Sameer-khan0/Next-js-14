@@ -19,6 +19,7 @@ const UserPage = async ({ params }: { params: Param }) => {
   const { id } = params;
   const req = await fetch(`https://fakestoreapi.com/products/${id}`);
   const res: Product = await req.json();
+
   return (
     <div>
       <h1>{res.title}</h1>
