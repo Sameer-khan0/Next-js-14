@@ -17,7 +17,7 @@ const MyLayout = ({
       </header>
       <main>{children}</main>
       <div>{newRoute}</div>
-      {Route2}
+      <div>{Route2}</div>
       <footer className="w-full bg-slate-400 p-4 text-center">Footer</footer>
     </div>
   );

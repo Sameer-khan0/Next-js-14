@@ -10,7 +10,7 @@ const Page = ({ data }:{data:data}) => {
     const router = useRouter();
     const { title,id } = data;
 
-    const handleProductClick = (productId) => {
+    const handleProductClick = (productId:{id:Number}) => {
         // console.log(productId)
         router.push(`products/${productId}`);
       };
