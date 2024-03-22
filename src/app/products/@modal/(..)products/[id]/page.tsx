@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Modal from "@/components/Modal";
 
 export const metadata:Metadata = {
   title: `Product`,
@@ -21,12 +22,14 @@ const UserPage = async ({ params }: { params: Param }) => {
   const res: Product = await req.json();
 
   return (
+    <Modal>
+    <div className=" ">
+    <h1>Intercepting component</h1>
     <div>
-      intersepting Route
-      <h1>{res.title}</h1>
-      <h2>{res.price}</h2>
       <img src={res.image} alt="image" />
     </div>
+    </div>
+    </Modal>
   );
 };
 

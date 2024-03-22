@@ -1,26 +1,24 @@
-"use client";
 import React from 'react'; 
-import { useRouter } from 'next/navigation'
+import Link from 'next/link';
 
 interface data{
     title:string,
-    id:string
+    id:string,
+    image:string
 }
 const Page = ({ data }:{data:data}) => {
-    const router = useRouter();
-    const { title,id } = data;
+   const { title,id,image } = data;
 
-    const handleProductClick = (productId:{id:Number}) => {
-        // console.log(productId)
-        router.push(`products/${productId}`);
-      };
 
   return (
     <div>
       {data && (
         <>
-        <ul>
-          <li className=' cursor-pointer font-bold' onClick={()=>handleProductClick(id)}>{title}</li>
+        <ul className=' flex gap-3 p-1'>
+          <div className=' w-8 h-8 rounded-3xl'>
+          <img src={image} className=' object-contain rounded-full' alt="image" />
+          </div>
+          <li className=' cursor-pointer font-bold'><Link href={`products/${id}`}>{title}</Link></li>
         </ul>
          </>
       )}
