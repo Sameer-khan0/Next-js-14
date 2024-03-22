@@ -7,6 +7,7 @@
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
+    
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -21,6 +22,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/layout.jsx", ".next/types/app/users/home2/page.tsx", ".next/types/app/users/page.tsx", ".next/types/app/users/[id]/page.tsx", "src/app/(auth)/layout.jsx", "src/app/parallroute/@Route2/page.jsx", "src/app/dashbord/@notification/page.jsx", "src/app/dashbord/@revenue/page.jsx", "src/app/dashbord/@users/page.jsx", "src/app/products/[id]/error.jsx", "src/app/products/layout.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/layout.jsx", ".next/types/app/users/home2/page.tsx", ".next/types/app/users/page.tsx", ".next/types/app/users/[id]/page.tsx", "src/app/(auth)/layout.jsx", "src/app/parallroute/@Route2/page.jsx", "src/app/dashbord/@notification/page.jsx", "src/app/dashbord/@revenue/page.jsx", "src/app/dashbord/@users/page.jsx", "src/app/products/[id]/error.jsx", "src/app/products/layout.tsx", "src/app/api/getapi/[id]/route.js"],
   "exclude": ["node_modules"]
 }
